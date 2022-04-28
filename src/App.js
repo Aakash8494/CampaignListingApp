@@ -4,6 +4,7 @@ import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useRef } from 'react';
 import { fetchCampaigns } from './redux/actions/campaignActions';
+import moment from 'moment';
 
 function App() {
 
@@ -44,6 +45,12 @@ function App() {
      var start_date1 = start_date.current.value;
      var end_date1 = end_date.current.value;
      var name1 = name.current.value;
+
+    if(start_date1!=="" && end_date1!=="" && ( moment(start_date1).isAfter(moment(end_date1)) ) )
+    {
+        alert('Check entered period !!!')
+        return false
+    }
  
      dispatch(fetchCampaigns({start_date1,end_date1,name1,new_campaign_data:""}));
  
