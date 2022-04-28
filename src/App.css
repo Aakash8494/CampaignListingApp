@@ -1,0 +1,128 @@
+/* .App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+/*  */
+
+* {
+  font-family: sans-serif; /* Change your font family */
+}
+
+.content-table {
+
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.filter_title {
+
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  /* width: 100%; */
+  border-radius: 5px 5px 0 0;
+  /* overflow: hidden; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.button {
+  background-color: #009879;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.container_child{
+  padding:12px 20px 12px 40px;
+  border:1px solid rgb(255, 255, 255);
+}
+
+#name {
+  background-image: url('../src/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#start_date{
+  background-image: url('../src/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#end_date{
+  background-image: url('../src/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.content-table thead tr,
+.filter_title {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td,
+.filter_title {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr,
+.filter_title {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.active-row {
+  font-weight: bold;
+  color: #009879;
+}

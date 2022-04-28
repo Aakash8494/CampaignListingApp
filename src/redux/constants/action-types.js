@@ -1,0 +1,4 @@
+export const ActionTypes = {
+    GET_CAMPAIGNS:"GET_CAMPAIGNS",
+    FILTER_CAMPAIGN:"FILTER_CAMPAIGN"
+};
