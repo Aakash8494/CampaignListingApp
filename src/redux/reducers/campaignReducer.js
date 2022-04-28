@@ -20,9 +20,13 @@ export const campaignReducer = (state = intialState, {type, payload_filter_data}
     
         var payload = payload_filter_data["payload"];
         var filter_data = payload_filter_data["filter_data"];
+        var new_campaign_data = filter_data["new_campaign_data"];
+        CampaignData = [...CampaignData,...new_campaign_data]
 
-        //console.log("payload->",payload)
+        //console.log("CampaignData->",CampaignData)
         //console.log("filter_data->",filter_data)
+
+        
 
         let state_new =  CampaignData.map((campaign_current)=>{
         
@@ -52,7 +56,7 @@ export const campaignReducer = (state = intialState, {type, payload_filter_data}
 
         });
 
-
+        
 
         var filtered_state = state_new.filter((campaign_current)=>{
 

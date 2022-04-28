@@ -8,13 +8,15 @@ import { fetchCampaigns } from './redux/actions/campaignActions';
 function App() {
 
   const CampaignHeadings = ["Name","User Name","Start Date","End Date","Active","Budget"];
-  var i=0;
+  var i=0,j=0;
 
   const campaigns = useSelector((state) => state)["campaignReducer"];
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCampaigns({start_date1:"",end_date1:"",name1:""}));
+    dispatch(
+        fetchCampaigns( { start_date1:"",end_date1:"",name1:"",new_campaign_data:"" } )
+    );
   }, [dispatch]);
 
   const start_date = useRef();
@@ -55,6 +57,8 @@ function App() {
 
     dispatch(fetchCampaigns({start_date1,end_date1,name1,new_campaign_data}));
  }
+
+ window.AddCampaigns = AddCampaigns;
 
  // Create our number formatter.
 var formatter = new Intl.NumberFormat('en-US', {
@@ -111,7 +115,9 @@ var formatter = new Intl.NumberFormat('en-US', {
                 <tr id="loader"><td>Loading...</td></tr>
                 {campaigns.map((campaign)=>{
                     return (                        
-                        <tr key={campaign.id}>
+                        <tr key={"list"+j++
+                        //new Date().getTime().toString()
+                        }>
                             <td >{campaign.name}</td>
                             <td >{campaign.UserName}</td>
                             <td >{campaign.startDate}</td>
