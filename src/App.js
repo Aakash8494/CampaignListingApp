@@ -129,7 +129,7 @@ var formatter = new Intl.NumberFormat('en-US', {
                             <td >{campaign.UserName}</td>
                             <td >{campaign.startDate}</td>
                             <td >{campaign.endDate}</td>
-                            <td className={ (campaign.ActiveStatus === "Active")?"active-row":""}>{campaign.ActiveStatus}</td>
+                            <td className={ (campaign.ActiveStatus === "Active")?"active-row":"inactive-row"}>{campaign.ActiveStatus}</td>
                             <td >{formatter.format(campaign.Budget)}</td>
                         </tr>
                     );

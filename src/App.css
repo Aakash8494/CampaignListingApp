@@ -126,3 +126,8 @@
   font-weight: bold;
   color: #009879;
 }
+
+.inactive-row {
+  font-weight: bold;
+  color: #980000;
+}
